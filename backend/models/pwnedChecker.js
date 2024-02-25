@@ -25,7 +25,7 @@ function pwnedCheckerMiddleware(req, res, next) {
 
             if (foundHash) {
                 // If password is found in breaches, return an error response
-                return res.status(400).send(`Registration is Unsuccessful. Password is vulnerable. Found ${foundHash[1]} matches.`);
+                return res.status(400).json({ success: false, message: `Registration is Unsuccessful. Password is vulnerable. Found ${foundHash[1]} matches.` });
             } else {
                 // If password is not found in breaches, proceed to the next middleware
                 next();

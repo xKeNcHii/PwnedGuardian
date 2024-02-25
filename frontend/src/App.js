@@ -1,5 +1,3 @@
-import React from 'react';
-
 function App() {
   return (
     <div className="max-w-md mx-auto mt-10">
@@ -21,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
