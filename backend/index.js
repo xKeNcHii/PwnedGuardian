@@ -1,9 +1,20 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
-app.get("/",(req, res) => {
-    res.send("Server is now running.")
-})
+const app = express();
+const port = process.env.PORT || 5000; // Adjust port for Vercel
+
+// Middleware to parse request bodies
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve the HTML page with the registration form
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Handle form submission
 app.post('/register', (req, res) => {
@@ -18,4 +29,12 @@ app.post('/register', (req, res) => {
     }
 });
 
-app.listen(5000, console.log("Server is now started on PORT 5000"));
+// Basic GET request handler to confirm server is running
+app.get('/ping', (req, res) => {
+    res.send('Server is up and running!');
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
