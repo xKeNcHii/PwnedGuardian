@@ -1,13 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const pwnedCheckerMiddleware = require('./models/pwnedChecker.js');
-const cors = require('cors'); // Import CORS middleware
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors()); // Enable CORS for all routes
 
 app.get('/', (req, res) => {
     res.send("Server is running.")
