@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="max-w-md mx-auto mt-10">
       <h1 className="text-2xl font-bold mb-6">Registration</h1>
-      <form action="/register" method="POST" className="space-y-4">
+      <form action="https://pwned-guardian-server.vercel.app/register" method="POST" className="space-y-4">
         <div>
           <label htmlFor="username" className="block">Username:</label>
           <input type="text" id="username" name="username" required className="border border-gray-300 rounded-md px-3 py-2 w-full" />
