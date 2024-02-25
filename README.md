@@ -5,7 +5,7 @@ PwnGuardian is a registration validation service that checks if a password has b
 ## Testing Website
 
 I have set-up a testing website in react and tailwind-css for the frontend, and node.js and express for the backend.
-You can test PwnGuardian on my testing website at [https://test.pwnguardian.com](https://pwned-guardian-client.vercel.app/). 
+You can test PwnGuardian on my testing website at https://pwned-guardian-client.vercel.app/. 
 This website is set up for testing purposes and allows you to simulate registration requests and observe the responses.
 
 ## Features
