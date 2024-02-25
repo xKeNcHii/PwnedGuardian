@@ -50,21 +50,21 @@ Content-Type: application/json
 }
 ```
 ## Example response for a successful registration:
-
+```
 json
 
 {
   "success": true,
   "message": "Registration successful!"
 }
-
+```
 ## Example response for an unsuccessful registration (password compromised):
-
+```
 {
   "success": false,
   "message": "Registration is Unsuccessful. Password is vulnerable. Found 3 matches."
 }
-
+```
 ## Contributing
 
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
