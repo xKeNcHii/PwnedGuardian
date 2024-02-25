@@ -2,6 +2,12 @@
 
 PwnGuardian is a registration validation service that checks if a password has been compromised in data breaches using the [Have I Been Pwned](https://haveibeenpwned.com/) API.
 
+## Testing Website
+
+I have set-up a testing website in react and tailwind-css for the frontend, and node.js and express for the backend.
+You can test PwnGuardian on my testing website at [https://test.pwnguardian.com](https://pwned-guardian-client.vercel.app/). 
+This website is set up for testing purposes and allows you to simulate registration requests and observe the responses.
+
 ## Features
 
 - Validates passwords against known data breaches.
