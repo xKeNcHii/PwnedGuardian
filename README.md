@@ -15,7 +15,7 @@ I have set-up a testing website using React for the frontend, Tailwind CSS for t
 
 ## Getting Started
 
-To get started with PwnGuardian, follow these steps:
+To use the PwnGuardian script middleware in your Express.js application, follow these steps:
 
 1. Clone the repository to your local machine:
 
@@ -23,19 +23,34 @@ To get started with PwnGuardian, follow these steps:
     git clone https://github.com/your-username/pwnguardian.git
     ```
 
-2. Install dependencies:
+2. Navigate to the `backend/models` directory in the cloned repository.
 
-    ```bash
-    npm install
+3. Copy the `pwnedChecker.js` file to your Express.js project's `models` directory.
+
+4. Include the middleware in your Express.js application by requiring it in your main server file (e.g., `app.js` or `server.js`) and using it as middleware for the `/register` endpoint.
+
+    ```javascript
+    const express = require('express');
+    const bodyParser = require('body-parser');
+    const pwnedCheckerMiddleware = require('./models/pwnedChecker.js');
+
+    const app = express();
+    const port = process.env.PORT || 5000;
+
+    app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.post('/register', pwnedCheckerMiddleware, (req, res) => {
+        // Your registration logic here
+    });
+
+    app.listen(port, () => {
+        console.log(`Server is running on http://localhost:${port}`);
+    });
     ```
 
-3. Start the server:
+5. Start your Express.js server.
 
-    ```bash
-    npm start
-    ```
-
-4. Integrate PwnGuardian into your application by sending registration requests to the provided endpoint.
+Now, the PwnGuardian middleware is integrated into your Express.js application, and it will validate passwords against known data breaches when users register.
 
 ## Usage
 
