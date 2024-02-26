@@ -60,10 +60,6 @@ Example request:
 ![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/54ff532d-32e9-4d57-8358-619660bc78ce)
 
 ```
-http
-POST /register HTTP/1.1
-Content-Type: application/json
-
 {
   "username": "exampleUser",
   "password": "weakpass"
@@ -71,17 +67,14 @@ Content-Type: application/json
 ```
 ## Example response for a successful registration:
 ```
-json
-
 {
   "success": true,
   "message": "Registration successful!"
 }
 ```
 ## Example response for an unsuccessful registration (password compromised):
-```
 ![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/95eefd77-5744-41ba-83b8-f6b571fd7692)
-
+```
 {
   "success": false,
   "message": "Registration is Unsuccessful. Password is vulnerable. Found 3 matches."
