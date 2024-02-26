@@ -2,6 +2,16 @@
 
 PwnGuardian is a registration validation service that checks if a password has been compromised in data breaches using the [Have I Been Pwned](https://haveibeenpwned.com/) API.
 
+## Table of Contents
+
+- [Testing Website](#testing-website)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [How PwnGuardian Works](#how-pwnguardian-works)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Testing Website
 ![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/3d73c1f7-788c-4770-b83e-1c8e5ffc75c3)
 
