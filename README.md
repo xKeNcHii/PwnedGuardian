@@ -94,6 +94,22 @@ Example request:
   "message": "Registration is Unsuccessful. Password is vulnerable. Found 3 matches."
 }
 ```
+
+## How PwnGuardian Works
+
+PwnGuardian leverages the Have I Been Pwned Passwords API to determine if a password has been compromised in data breaches. This API, developed by Troy Hunt, allows users to check whether their passwords have appeared in previously known breaches. The primary goal is to provide users with insights into the security of their passwords without compromising their privacy.
+
+Using SHA-1 Hashing:
+
+When a password is submitted to the PwnGuardian API, it undergoes a SHA-1 hashing process. This hashing ensures that the password is transformed into a unique fixed-length string of characters, known as a hash. The hash serves as a secure representation of the password without revealing the original text.
+
+K-Anonymity Mechanism
+
+To protect user privacy and prevent the exposure of sensitive information, PwnGuardian employs a k-anonymity mechanism. Instead of sending the entire hashed password to the API, only the first five characters of the hash are transmitted. This partial hash is then used to retrieve a subset of passwords from the API database that share the same initial characters.
+
+Searching for Matches
+
+Upon receiving the subset of password hashes from the API, PwnGuardian searches for matches by comparing the complete hashed password against the retrieved hashes. If a match is found, it indicates that the password has previously appeared in a data breach.
 ## Contributing
 
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
