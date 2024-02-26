@@ -57,6 +57,7 @@ Now, the PwnGuardian middleware is integrated into your Express.js application, 
 To use PwnGuardian, send a POST request to the `/register` endpoint with the user's desired username and password. PwnGuardian will validate the password against known data breaches and respond with a success or error message.
 
 Example request:
+![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/54ff532d-32e9-4d57-8358-619660bc78ce)
 
 ```
 http
@@ -65,7 +66,7 @@ Content-Type: application/json
 
 {
   "username": "exampleUser",
-  "password": "examplePassword"
+  "password": "weakpass"
 }
 ```
 ## Example response for a successful registration:
@@ -79,6 +80,8 @@ json
 ```
 ## Example response for an unsuccessful registration (password compromised):
 ```
+![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/95eefd77-5744-41ba-83b8-f6b571fd7692)
+
 {
   "success": false,
   "message": "Registration is Unsuccessful. Password is vulnerable. Found 3 matches."
