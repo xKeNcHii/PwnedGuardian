@@ -20,7 +20,7 @@ To use the PwnGuardian script middleware in your Express.js application, follow 
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/pwnguardian.git
+    git clone https://github.com/xKeNcHii/PwnedGuardian
     ```
 
 2. Navigate to the `backend/models` directory in the cloned repository.
