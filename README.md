@@ -13,11 +13,22 @@ PwnGuardian is a registration validation service that checks if a password has b
 - [License](#license)
 
 ## Testing Website
-![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/3d73c1f7-788c-4770-b83e-1c8e5ffc75c3)
 
-I have set-up a testing website using React for the frontend, Tailwind CSS for the styling, and Node.js with Express for the backend. You can test PwnGuardian on my testing website at [https://pwned-guardian-client.vercel.app/](https://pwned-guardian-client.vercel.app/). This website is set up for testing purposes and allows you to simulate registration requests and observe the responses.
+![PwnGuardian Testing Website](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/3d73c1f7-788c-4770-b83e-1c8e5ffc75c3)
 
-Sample:
+I have set up a testing website using:
+
+- **React**: Used for the frontend development.
+- **Tailwind CSS**: Employed for styling the website.
+- **Node.js with Express**: Utilized for the backend server.
+
+You can test PwnGuardian on my testing website at [https://pwned-guardian-client.vercel.app/](https://pwned-guardian-client.vercel.app/). 
+
+This website is set up for testing purposes and allows you to simulate registration requests and observe the responses.
+
+
+**Sample:**
+
 {
   "username": "123",
   "password": "123"
@@ -25,7 +36,7 @@ Sample:
 
 ![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/e49ab6ca-e1a6-400b-897b-3022e387e82f)
 
-Response:
+**Response:**
 
 ![image](https://github.com/xKeNcHii/PwnedGuardian/assets/109564316/f3787622-3c16-468a-b3af-743b97c135b9)
 
@@ -109,17 +120,18 @@ Example request:
 
 PwnGuardian leverages the Have I Been Pwned Passwords API to determine if a password has been compromised in data breaches. This API, developed by Troy Hunt, allows users to check whether their passwords have appeared in previously known breaches. The primary goal is to provide users with insights into the security of their passwords without compromising their privacy.
 
-Using SHA-1 Hashing:
+**Using SHA-1 Hashing:**
 
 When a password is submitted to the PwnGuardian API, it undergoes a SHA-1 hashing process. This hashing ensures that the password is transformed into a unique fixed-length string of characters, known as a hash. The hash serves as a secure representation of the password without revealing the original text.
 
-K-Anonymity Mechanism
+**K-Anonymity Mechanism**
 
 To protect user privacy and prevent the exposure of sensitive information, PwnGuardian employs a k-anonymity mechanism. Instead of sending the entire hashed password to the API, only the first five characters of the hash are transmitted. This partial hash is then used to retrieve a subset of passwords from the API database that share the same initial characters.
 
-Searching for Matches
+**Searching for Matches**
 
 Upon receiving the subset of password hashes from the API, PwnGuardian searches for matches by comparing the complete hashed password against the retrieved hashes. If a match is found, it indicates that the password has previously appeared in a data breach.
+
 ## Contributing
 
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
